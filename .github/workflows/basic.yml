@@ -24,5 +24,5 @@ jobs:
         # public keys of SSH servers
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         if_key_exists: replace
-    - run: cat /home/runner/.ssh/id_rsa
+    - run: ls -la /home/runner/.ssh
     - run: ssh alodi@developer.alodi.app -vvv
