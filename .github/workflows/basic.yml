@@ -18,11 +18,11 @@ jobs:
       uses: shimataro/ssh-key-action@v2.3.1
       with:
         # SSH private key
-        key: ${SSH_SECRET_KEY}
+        key: ${secrets.SSH_SECRET_KEY}
         # SSH key file name (default: id_rsa)
         name: id_rsa
         # public keys of SSH servers
-        known_hosts: ${SSH_KNOWN_HOSTS}
+        known_hosts: ${secrets.SSH_KNOWN_HOSTS}
     - name: Run build script
       run: ssh alodi@developer.alodi.app
       shell: bash
