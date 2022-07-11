@@ -23,4 +23,5 @@ jobs:
         name: id_rsa
         # public keys of SSH servers
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+        if_key_exists: replace
     - run: ssh alodi@developer.alodi.app -vvv
