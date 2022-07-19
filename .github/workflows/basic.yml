@@ -2,23 +2,23 @@ name: basic
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
     environment: Production
     steps:
-    - uses: actions/checkout@v3
-    - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_SECRET_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        script: |
-          whoami
-          cd /srv/alodi-blog-backend
-          ls -la
+      - uses: actions/checkout@v3
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_SECRET_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd /srv/alodi-blog-backend
+            git pull
+            docker-compose down
+            docker-compose up -d
