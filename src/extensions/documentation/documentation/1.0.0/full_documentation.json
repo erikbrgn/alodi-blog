@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-07-10T13:12:27.572Z"
+    "x-generation-date": "2022-07-17T17:14:05.555Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -28,7 +28,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "http://0.0.0.0:1337/api",
       "description": "Development server"
     }
   ],
@@ -111,6 +111,7 @@
         }
       },
       "PostListResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "array",
@@ -457,6 +458,7 @@
         }
       },
       "PostResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "object",
@@ -854,6 +856,7 @@
         }
       },
       "UploadFileListResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "array",
@@ -1249,6 +1252,7 @@
         }
       },
       "UploadFileResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "object",
@@ -1651,6 +1655,7 @@
         }
       },
       "UsersPermissionsPermissionListResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "array",
@@ -2244,6 +2249,7 @@
         }
       },
       "UsersPermissionsPermissionResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "object",
@@ -2867,6 +2873,7 @@
         }
       },
       "UsersPermissionsRoleListResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "array",
@@ -3489,6 +3496,7 @@
         }
       },
       "UsersPermissionsRoleResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "object",
@@ -4143,6 +4151,7 @@
         }
       },
       "UsersPermissionsUserListResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "array",
@@ -4755,6 +4764,7 @@
         }
       },
       "UsersPermissionsUserResponse": {
+        "type": "object",
         "properties": {
           "data": {
             "type": "object",

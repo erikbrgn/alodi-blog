@@ -15,8 +15,6 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       NODE_ENV: ${NODE_ENV}
-    links:
-      - postgresDB:postgresDB
     volumes:
       - ./config:/opt/app/config
       - ./src:/opt/app/src

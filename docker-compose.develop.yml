@@ -30,15 +30,13 @@ services:
     depends_on:
       - postgresDB
 
-  postgresDB:
-    image: postgres:12.0-alpine
-    container_name: postgresDB
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data/:/root/db/
     restart: unless-stopped
-    env_file: .env
-    environment:
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: ${DATABASE_NAME}
     volumes:
       - ./data:/var/lib/postgresql/data/
     ports:
