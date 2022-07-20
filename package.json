@@ -19,7 +19,6 @@
     "better-sqlite3": "7.4.6",
     "knex": "^2.1.0",
     "pg": "^8.7.3",
-    "strapi-connector-bookshelf": "^3.6.10",
     "strapi-plugin-config-sync": "^1.0.2"
   },
   "author": {
