@@ -91,6 +91,18 @@
       "conditions": []
     },
     {
+      "action": "admin::project-settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::project-settings.update",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
       "action": "admin::roles.create",
       "subject": null,
       "properties": {},
