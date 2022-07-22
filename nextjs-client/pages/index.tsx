@@ -9,7 +9,7 @@ const Home = () => {
           name="description"
           content="A blog about the development of Alodi"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.png" />
       </Head>
     </div>
   );

@@ -1,18 +1,30 @@
 html,
 body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inconsalata', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
 a {
-  color: inherit;
+  display: inline-block;
   text-decoration: none;
+  color: inherit;
+  line-height: 1.5rem;
+  border-bottom: 1px solid #999;
+  transition: border-color 0.2s linear;
 }
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 2.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +32,26 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: #fff;
+    background-color: #222;
   }
+
+  a:hover {
+    border-color: #fff;
+  }
+
+  p {
+    color: #f6f6f6e7;
+  }
+}
+
+@font-face {
+  font-family: 'Inconsalata';
+  font-display: swap;
+  src: url('/Inconsolata-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/AlegreyaSansSC-Thin.ttf') format('truetype');
 }
