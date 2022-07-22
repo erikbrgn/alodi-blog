@@ -48,10 +48,10 @@ p {
 @font-face {
   font-family: 'Inconsalata';
   font-display: swap;
-  src: url('/Inconsolata-Regular.ttf') format('truetype');
+  src: url('/fonts/Inconsolata-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Alegreya';
-  src: url('/AlegreyaSansSC-Thin.ttf') format('truetype');
+  src: url('/fonts/AlegreyaSansSC-Thin.ttf') format('truetype');
 }
