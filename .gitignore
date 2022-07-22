@@ -114,3 +114,5 @@ build
 .strapi-updater.json
 
 data/
+
+**/*/full_documentation.json
