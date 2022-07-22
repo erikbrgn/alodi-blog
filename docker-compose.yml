@@ -21,8 +21,14 @@ services:
       - ./package.json:/opt/package.json
       - ./yarn.lock:/opt/yarn.lock
       - ./.env:/opt/app/.env
-    ports:
-      - "1337:1337"
+    networks:
+      - strapi
+
+  nextjs:
+    container_name: nextjs
+    build:
+      context: ./nextjs-client
+    restart: unless-stopped
     networks:
       - strapi
 
