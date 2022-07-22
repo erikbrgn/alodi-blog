@@ -23,8 +23,8 @@ const Home = () => {
             publishedAt: 'published at',
             createdBy: {},
           },
-        ].map((post) => (
-          <Post data={post} />
+        ].map((post, index) => (
+          <Post key={index} data={post} />
         ))}
       </Layout>
     </div>
