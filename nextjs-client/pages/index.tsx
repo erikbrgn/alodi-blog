@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/layout/layout';
+import Post from '../components/post/post';
 
 const Home = () => {
   return (
@@ -12,7 +13,20 @@ const Home = () => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Layout></Layout>
+      <Layout>
+        {[
+          {
+            Title: 'test',
+            Body: 'test',
+            createdAt: 'created at',
+            updatedAt: 'updated at',
+            publishedAt: 'published at',
+            createdBy: {},
+          },
+        ].map((post) => (
+          <Post data={post} />
+        ))}
+      </Layout>
     </div>
   );
 };
