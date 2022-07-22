@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Layout from '../components/layout/layout';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <Layout></Layout>
     </div>
   );
 };

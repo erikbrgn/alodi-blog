@@ -1,0 +1,43 @@
+.wrapper {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper.sticky {
+  width: auto;
+}
+
+.logo-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Alegreya';
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
+/* Sticky behavior */
+.wrapper.sticky .logo-title {
+  position: relative;
+  top: unset;
+  left: unset;
+  transform: unset;
+  font-size: 1.75rem;
+}
+
+.logo {
+  margin: auto;
+}
+
+.wrapper.sticky .logo {
+  margin: 0;
+  height: 3rem;
+}
