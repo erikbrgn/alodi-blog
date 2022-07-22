@@ -14,6 +14,7 @@ services:
       - ./package.json:/opt/package.json
       - ./yarn.lock:/opt/yarn.lock
       - ./.env:/opt/app/.env
+      - ./tmp/data.db:/opt/app/tmp/data.db
     ports:
       - "1337:1337"
     networks:

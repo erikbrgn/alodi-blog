@@ -5,7 +5,7 @@ const sqlite = {
   connection: {
     filename: ".tmp/data.db",
   },
-  useNullAsDefault: true,
+  useNullAsDefault: false,
 };
 
 const postgres = {
@@ -17,7 +17,6 @@ const postgres = {
     user: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
   },
-  useNullAsDefault: true,
 };
 
 const mysql = {
