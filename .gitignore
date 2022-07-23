@@ -116,3 +116,4 @@ build
 data/
 
 **/*/full_documentation.json
+/src/extensions/documentation/public/*.html
