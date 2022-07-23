@@ -29,6 +29,10 @@ services:
     build:
       context: ./nextjs-client
     restart: unless-stopped
+    links:
+      - strapi
+    depends_on:
+      - strapi
     networks:
       - strapi
 
