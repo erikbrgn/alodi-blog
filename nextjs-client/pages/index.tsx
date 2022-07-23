@@ -29,7 +29,7 @@ const Home: FunctionComponent<IHomeProps> = ({ posts }) => {
   return (
     <div>
       <Head>
-        <title>Alodi | Blog</title>
+        <title>Blog | Alodi</title>
         <meta
           name="description"
           content="A blog about the development of Alodi"
