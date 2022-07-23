@@ -1,26 +1,23 @@
 import { FunctionComponent } from 'react';
+import { strapiData } from '../../pages';
 import styles from './post.module.css';
 
-interface Post {
+export interface IPost {
   Title: string;
   Body: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  createdBy: {};
 }
 
-interface PostProps {
-  data: Post;
+interface IPostProps {
+  data: strapiData<IPost>;
 }
 
-const Post: FunctionComponent<PostProps> = ({ data }) => {
+const Post: FunctionComponent<IPostProps> = ({ data }) => {
   return (
     <article>
-      <h2 className={styles.title}>{data.Title}</h2>
+      <h2 className={styles.title}>{data.attributes?.Title}</h2>
       <div
         className={styles.wrapper}
-        dangerouslySetInnerHTML={{ __html: data.Body }}
+        dangerouslySetInnerHTML={{ __html: data.attributes?.Body }}
       ></div>
     </article>
   );
