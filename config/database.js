@@ -3,7 +3,7 @@ const path = require("path");
 const sqlite = {
   client: "sqlite",
   connection: {
-    filename: ".tmp/data.db",
+    filename: path.join(__dirname, "..", ".tmp/data.db"),
   },
   useNullAsDefault: false,
 };
