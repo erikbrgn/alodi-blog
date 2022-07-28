@@ -28,7 +28,6 @@ services:
     build:
       context: ./nextjs-client
     command: /bin/bash -c "./wait-for-it.sh strapi:1337 -- yarn build && yarn start"
-    restart: unless-stopped
     env_file: ./nextjs-client/.env
     environment:
       - CMS_HOST=strapi:1337
