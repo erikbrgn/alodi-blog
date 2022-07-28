@@ -37,7 +37,7 @@ const Home: FunctionComponent<IHomeProps> = ({ posts }) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Layout>
-        {posts.map((post, index) => (
+        {posts?.map((post, index) => (
           <Post key={index} data={post} />
         ))}
       </Layout>
