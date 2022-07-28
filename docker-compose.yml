@@ -1,9 +1,8 @@
 version: "3.6"
 services:
   strapi:
-    container_name: strapi
-    build: .
-    image: strapi:latest
+    build:
+      context: ./
     restart: unless-stopped
     env_file: .env
     environment:
@@ -28,7 +27,11 @@ services:
     container_name: nextjs
     build:
       context: ./nextjs-client
+    command: /bin/bash -c "./wait-for-it.sh strapi:1337 -- yarn build && yarn start"
     restart: unless-stopped
+    env_file: ./nextjs-client/.env
+    environment:
+      - CMS_HOST=strapi:1337
     links:
       - strapi
     depends_on:
