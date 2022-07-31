@@ -20,6 +20,8 @@ services:
       - ./package.json:/opt/package.json
       - ./yarn.lock:/opt/yarn.lock
       - ./.env:/opt/app/.env
+    ports:
+      - "1337:1337"
     networks:
       - strapi
 
@@ -37,8 +39,19 @@ services:
       - strapi
     networks:
       - strapi
+      - traefik-global-proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blog-alodi.entrypoints=websecure"
+      - "traefik.http.routers.blog-alodi.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.blog-alodi.rule=PathPrefix(`/blog`, `/blog/posts/{id:[0-9]+}`)"
+      - "traefik.http.routers.blog-alodi.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.blog-alodi.tls.domains[0].main=${DOMAIN}"
+      - "traefik.http.services.app-elements.loadbalancer.server.port=80"
 
 networks:
   strapi:
     name: Strapi
     driver: bridge
+  traefik-global-proxy:
+    external: true
