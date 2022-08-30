@@ -41,3 +41,22 @@
   margin: 0;
   height: 3rem;
 }
+
+.sticky h1 {
+  position: relative;
+  top: unset;
+  left: unset;
+  transform: unset;
+  font-size: 1.75rem;
+}
+
+.sticky svg {
+  margin: 0;
+  height: 3rem;
+}
+
+@media only screen and (max-width: 100ch) {
+  .sticky h1 {
+    display: none;
+  }
+}

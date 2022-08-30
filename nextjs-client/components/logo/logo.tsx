@@ -1,11 +1,13 @@
 import { FunctionComponent } from 'react';
 import styles from './logo.module.css';
 
-interface LogoProps {}
+type logoProps = {
+  sticky: boolean;
+};
 
-const Logo: FunctionComponent<LogoProps> = () => {
+const Logo: FunctionComponent<logoProps> = ({ sticky }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${sticky && styles.sticky}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="62.348"
