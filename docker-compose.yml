@@ -46,7 +46,7 @@ services:
       - "traefik.http.routers.blog-alodi.rule=Host(`${DOMAIN}`)"
       - "traefik.http.routers.blog-alodi.tls.certresolver=letsencrypt"
       - "traefik.http.routers.blog-alodi.tls.domains[0].main=${DOMAIN}"
-      - "traefik.http.services.app-alodi-blog.loadbalancer.server.port=80"
+      - "traefik.http.services.app-alodi-blog.loadbalancer.server.port=${NEXT_PORT}"
 
 networks:
   strapi:
