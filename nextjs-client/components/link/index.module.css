@@ -1,0 +1,37 @@
+.link {
+  font-size: 0.825rem;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  border-bottom: none;
+  font-style: italic;
+  color: #ccc;
+  position: relative;
+}
+
+.link:after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.link:hover:after {
+  animation: link 0.25s ease-in-out;
+}
+
+@keyframes link {
+  0% {
+    width: 100%;
+  }
+
+  15% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

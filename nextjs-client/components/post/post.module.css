@@ -1,20 +1,40 @@
+.article {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
 .title {
   display: flex;
   align-items: center;
   font-family: 'Inconsalata';
-  text-align: center;
   font-weight: 400;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   letter-spacing: 2px;
   margin: 0;
   text-transform: lowercase;
   padding-top: 2rem;
+  white-space: nowrap;
+}
+
+.title:before {
+  width: 10%;
+}
+
+.title:after {
+  width: 100%;
+}
+
+article:nth-last-of-type(odd) .title:before {
+  width: 100%;
+}
+
+article:nth-last-of-type(odd) .title:after {
+  width: 10%;
 }
 
 .title:before,
 .title:after {
   content: '';
-  flex: 1;
   height: 1px;
   background-color: #707070;
 }
@@ -30,5 +50,51 @@
 }
 
 .wrapper {
+  max-height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.wrapper:after {
+  background: linear-gradient(to top, #222 1.25rem, hsla(0, 0%, 100%, 0));
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 6rem;
+  width: 100%;
+  position: absolute;
+}
+
+.wrapper,
+.meta {
   padding: 0 1rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article:nth-last-of-type(odd) .meta {
+  flex-direction: row-reverse;
+}
+
+.date {
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.825rem;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .article {
+    text-align: center;
+  }
+
+  .title:before,
+  .title:after {
+    flex: 1 0;
+  }
 }
