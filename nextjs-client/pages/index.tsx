@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import { FunctionComponent } from 'react';
 import Layout from '../components/layout/layout';
-import Post, { IPost } from '../components/post/post';
+import { Post, IPost } from '../components/post/post';
 
-type strapiResponse<T> = {
+export type strapiResponse<T> = {
   data: Array<strapiData<T>>;
   meta: {};
 };
@@ -27,21 +26,11 @@ interface IHomeProps {
 
 const Home: FunctionComponent<IHomeProps> = ({ posts }) => {
   return (
-    <div>
-      <Head>
-        <title>Blog | Alodi</title>
-        <meta
-          name="description"
-          content="A blog about the development of Alodi"
-        />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <Layout>
-        {posts?.map((post, index) => (
-          <Post key={index} data={post} />
-        ))}
-      </Layout>
-    </div>
+    <Layout>
+      {posts?.map((post, index) => (
+        <Post key={index} data={post} />
+      ))}
+    </Layout>
   );
 };
 

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { FunctionComponent, ReactNode } from 'react';
 import Footer from '../footer/footer';
 import Header from '../header/header';
@@ -11,6 +12,14 @@ interface LayoutProps {
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <>
+      <Head>
+        <title>Blog | Alodi</title>
+        <meta
+          name="description"
+          content="A blog about the development of Alodi"
+        />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
