@@ -16,7 +16,7 @@
     "@strapi/plugin-documentation": "^4.2.3",
     "@strapi/plugin-i18n": "4.2.3",
     "@strapi/plugin-users-permissions": "4.2.3",
-    "@strapi/strapi": "4.2.3",
+    "@strapi/strapi": "4.8.0",
     "@strapi/utils": "^4.2.3",
     "better-sqlite3": "7.4.6",
     "knex": "^2.1.0",
